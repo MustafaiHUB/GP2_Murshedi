@@ -47,7 +47,7 @@ Ensure you have the following installed:
 ### 2. Clone the Repository
 
 ```bash
-git clone https://github.com/MustafaiHUB/murshedi-ai-chatbot.git
+git clone https://github.com/MustafaiHUB/GP2_Murshedi.git
 cd murshedi-ai-chatbot
 
 ---
