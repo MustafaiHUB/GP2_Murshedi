@@ -60,11 +60,11 @@ function BotResponse({ blindMode, answer, handleCopy, response_id }) {
           />
           <div className='flex flex-col gap-1'>
             {answer.includes("Try again") ? (
-              <pre className='whitespace-pre-wrap font-mono text-stone-300 bg-red-700 px-2 py-1 rounded-md'>
+              <pre className='whitespace-pre-wrap font-sans text-stone-300 bg-red-700 px-2 py-1 rounded-md'>
                 {cleanText(answer)}
               </pre>
             ) : (
-              <pre className='whitespace-pre-wrap font-mono'>
+              <pre className='whitespace-pre-wrap font-sans'>
                 {cleanText(answer)}
               </pre>
             )}

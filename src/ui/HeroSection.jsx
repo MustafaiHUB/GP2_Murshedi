@@ -29,7 +29,7 @@ function HeroSection() {
           Designed to keep pace with global technological advancements, the
           system supports both text and voice interaction, ensuring
           accessibility and ease of use for all users. With its dynamic
-          knowledge base—updated regularly by department heads—and secure user
+          knowledge base updated regularly by department heads and secure user
           management, the chatbot reflects a forward-thinking approach in line
           with the School’s commitment to academic excellence, digital
           transformation, and service to the local and global community.

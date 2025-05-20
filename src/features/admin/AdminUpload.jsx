@@ -4,7 +4,6 @@ import Logo from "../../ui/Logo";
 import SpecialText from "../../ui/SpecialText";
 import Button from "../../ui/Button";
 import { useDispatch } from "react-redux";
-// import { setAdmin } from "./adminSlice";
 import { uploadFiles } from "../../services/apiChatbot";
 import { logout } from "../../authentication/userSlice";
 
@@ -28,7 +27,10 @@ export default function AdminUpload() {
         fileType === "application/msword" ||
         fileType ===
           "application/vnd.openxmlformats-officedocument.wordprocessingml.document" ||
-        fileType === "text/html"
+        fileType ===
+          "application/vnd.openxmlformats-officedocument.presentationml.presentation" ||
+        fileType === "text/html" ||
+        fileType === "text/plain"
       );
     });
 
@@ -60,18 +62,7 @@ export default function AdminUpload() {
 
     setIsUploading(true);
 
-    // Mock API call
     try {
-      // Here you would send the files to your backend
-      //   const formData = new FormData();
-      //   files.forEach((file, index) => {
-      //     formData.append(`file-${index}`, file);
-      //   });
-
-      //   console.log(formData);
-      // Simulate API call with a delayz
-      //   await new Promise((resolve) => setTimeout(resolve, 1500));
-
       console.log("Files ready to be sent:", files);
 
       await uploadFiles(files);
@@ -131,7 +122,6 @@ export default function AdminUpload() {
 
   function handleLogout() {
     console.log("logout");
-    // dispatch(setAdmin(false));
     dispatch(logout());
   }
   return (
@@ -163,7 +153,7 @@ export default function AdminUpload() {
             File Upload Dashboard
           </h1>
           <p className='text-gray-400'>
-            Upload PDF, Word, or HTML files to the system
+            Upload PDF, Word, PPTX, TXT, or HTML files to the system
           </p>
         </div>
 
@@ -185,7 +175,7 @@ export default function AdminUpload() {
               className='hidden'
               onChange={handleFileChange}
               multiple
-              accept='.pdf,.doc,.docx,.html'
+              accept='.pdf,.doc,.docx,.html,.pptx,.txt'
             />
             <Upload
               size={40}
@@ -196,7 +186,7 @@ export default function AdminUpload() {
             </h2>
             <p className='text-gray-400 mb-4'>Or click to browse your files</p>
             <p className='text-sm text-gray-500'>
-              Supported formats: PDF, Word, HTML
+              Supported formats: PDF, Word, PPTX, TXT, and HTML
             </p>
           </div>
         </div>

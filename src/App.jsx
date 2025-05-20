@@ -25,15 +25,6 @@ import ProtectedRoute from "./services/ProtectedRoute";
 import ProtectedAdmin from "./services/ProtectedAdmin";
 import Terms from "./pages/Terms";
 
-// const fake_user = {
-//   firstName: "Student",
-//   lastName: "Account",
-//   email: "example@gmail.com",
-//   blindMode: false,
-//   role: "USER",
-//   userId: "12312312",
-// };
-
 const locations = [
   { name: "CPE101", coords: [32.00978, 35.875672] },
   { name: "CPE102", coords: [32.010931, 35.876031] },
@@ -41,17 +32,21 @@ const locations = [
 
 localStorage.setItem("locations", JSON.stringify(locations));
 
+// Testing Purposes Only
+// const fake_user = {
+//   firstName: "Student",
+//   lastName: "Account",
+//   email: "example@gmail.com",
+//   blindMode: false,
+//   appUserRole: "USER",
+//   userId: "12312312",
+// };
+
 // localStorage.setItem("isAuthenticated", true);
 // localStorage.setItem("token", "asdasdasdjkl;jqwk920314890324");
 // localStorage.setItem(
 //   "questions",
 //   JSON.stringify([])
-// JSON.stringify([
-//   {
-//     id: "8d7798c5-a9bf-47e1-b905-3eb89ab67821",
-//     title: "Murshedi",
-//   },
-// ])
 // );
 // localStorage.setItem("user", JSON.stringify(fake_user));
 
