@@ -1,18 +1,6 @@
 function HeroSection() {
   return (
     <div className='h-full'>
-      <video
-        autoPlay={true}
-        loop={true}
-        muted
-        className='w-full'
-      >
-        <source
-          src='/Engineering.mp4'
-          type='video/mp4'
-        />
-      </video>
-
       <section className='py-10'>
         <div className='text-center'>
           <h1 className='text-3xl sm:text-4xl font-semibold'>
